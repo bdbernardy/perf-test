@@ -26,7 +26,10 @@ function createRandomGeohash(padding) {
 export default function () {
   const origin = createRandomGeohash('a');
   const destination = createRandomGeohash('b');
-  http.get(`http://localhost:3000/redis/${origin}/${destination}`, { tags: 'redis' });
+  // http.get(`http://localhost:3000/redis/${origin}/${destination}`, { tags: 'redis' });
   // http.get(`http://localhost:3000/mongo/${origin}/${destination}`, { tags: 'mongo' });
   // http.get(`http://localhost:3002/routes/${origin}/${destination}`, { tags: 'nginx' });
+  // http.get(`http://localhost:3000/map/${origin}/${destination}`, { tags: 'map' });
+  http.get(`http://localhost:3000/for-of/${origin}/${destination}`, { tags: 'map' });
+  // http.get(`http://localhost:3000/for/${origin}/${destination}`, { tags: 'map' });
 }
